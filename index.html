@@ -275,7 +275,7 @@
         } catch (e) { showToast("❌ Connection Error"); } finally { document.getElementById("loaderOverlay").style.display = "none"; }
     }
 
-    function checkPassword() { if (document.getElementById("adminPass").value === "azza") { document.getElementById("passPopup").style.display = "none"; document.getElementById("adminPass").value = ""; if (passAction === "in") executeFinalSubmit(currentMode, currentName, currentItems); else if (passAction === "ga") updateGAUI(true); } else showToast("❌ Salah!"); }
+    function checkPassword() { if (document.getElementById("adminPass").value === "pbm123") { document.getElementById("passPopup").style.display = "none"; document.getElementById("adminPass").value = ""; if (passAction === "in") executeFinalSubmit(currentMode, currentName, currentItems); else if (passAction === "ga") updateGAUI(true); } else showToast("❌ Salah!"); }
     function showToast(m) { const t = document.getElementById("popupToast"); t.textContent = m; t.style.display = "block"; setTimeout(() => t.style.display="none", 2500); }
     function showSuccessPopup(m, its) { document.getElementById("successMode").textContent = m.toUpperCase(); document.getElementById("successItems").innerHTML = its.map(i => `• ${i.item}: <span style="color:red;">${i.qty}</span>`).join('<br>'); document.getElementById("successPopup").style.display = "flex"; }
     function closeSuccessPopup() { document.getElementById("successPopup").style.display = "none"; }
